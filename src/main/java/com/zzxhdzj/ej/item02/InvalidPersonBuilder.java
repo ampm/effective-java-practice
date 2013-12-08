@@ -1,4 +1,4 @@
-package com.zzxhdzj.ej.item2;
+package com.zzxhdzj.ej.item02;
 
 /**
  * Created with IntelliJ IDEA.
@@ -7,25 +7,19 @@ package com.zzxhdzj.ej.item2;
  * Time: 10:53 PM
  * To change this template use File | Settings | File Templates.
  */
-public class ValidPersonBuilder {
+public class InvalidPersonBuilder{
     private Person person;
 
-    public ValidPersonBuilder(Person person) {
+    public InvalidPersonBuilder(Person person) {
         this.person = person;
     }
-    public ValidPersonBuilder withFirstName(String firstName){
+    public InvalidPersonBuilder withFirstName(String firstName){
         person.setFirstName(firstName);
         return this;
     }
     public ValidPersonBuilder withLastName(String lastName){
         person.setLastName(lastName);
-        return this;
+        return new ValidPersonBuilder(person);
     }
-    public ValidPersonBuilder withTitle(String title) {
-        person.setTitle(title);
-        return this;
-    }
-    public Person build(){
-        return person;
-    }
+
 }

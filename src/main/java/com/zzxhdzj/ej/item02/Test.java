@@ -1,4 +1,4 @@
-package com.zzxhdzj.ej.item2;
+package com.zzxhdzj.ej.item02;
 
 /**
  * Created with IntelliJ IDEA.
@@ -10,6 +10,7 @@ package com.zzxhdzj.ej.item2;
 public class Test {
     public static void main(String[] args) {
         Person person1 = new PersonBuilder().withFirstName("John").withLastName("Doe").withTitle("Mr").build();
-        Person person2 = new PersonBuilder().withFirstName("John").withTitle("Mr").build();
+        //a force validation in compile time
+//        Person person2 = new PersonBuilder().withFirstName("John").withTitle("Mr").build();
     }
 }
